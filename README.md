@@ -31,7 +31,7 @@
                 radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
             pointer-events: none;
-            z-index: 0;
+            z-index: -1;
         }
 
         .container {
@@ -43,7 +43,7 @@
             padding: 50px;
             margin: 0 auto;
             position: relative;
-            z-index: 1;
+            z-index: 100;
             backdrop-filter: blur(10px);
         }
 
@@ -128,6 +128,9 @@
             border-radius: 12px;
             font-size: 16px;
             transition: all 0.3s;
+            position: relative;
+            z-index: 100;
+            pointer-events: auto;
         }
 
         .search-input:focus {
@@ -146,6 +149,9 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
+            position: relative;
+            z-index: 100;
+            pointer-events: auto;
         }
 
         .search-btn:hover:not(:disabled) {
@@ -199,6 +205,9 @@
             transition: all 0.3s;
             font-family: inherit;
             background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+            z-index: 100;
+            pointer-events: auto;
         }
 
         textarea:focus {
@@ -224,7 +233,8 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
-            z-index: 10;
+            z-index: 100;
+            pointer-events: auto;
         }
 
         .style-card::before {
@@ -237,6 +247,8 @@
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
             opacity: 0;
             transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 1;
         }
 
         .style-card:hover::before {
@@ -298,7 +310,8 @@
             transition: all 0.3s;
             background: white;
             position: relative;
-            z-index: 10;
+            z-index: 100;
+            pointer-events: auto;
         }
 
         select:focus {
@@ -323,7 +336,8 @@
             cursor: pointer;
             transition: all 0.3s;
             position: relative;
-            z-index: 10;
+            z-index: 100;
+            pointer-events: auto;
         }
 
         .generate-btn {
@@ -478,7 +492,8 @@
             font-weight: bold;
             transition: all 0.3s;
             position: relative;
-            z-index: 10;
+            z-index: 100;
+            pointer-events: auto;
         }
 
         .download-btn {
